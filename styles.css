@@ -414,32 +414,62 @@ header nav {
     }
 }
 
-/* For Desktops */
+/* ================================================= */
+/* === Replace the entire desktop block with this === */
+/* ================================================= */
+
 @media (min-width: 1024px) {
-    /* Central timeline becomes a two-sided timeline */
+    /* --- General Desktop Enhancements (from your original file) --- */
+    .education-grid, .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .education-card {
+        flex-direction: row;
+        text-align: left;
+        gap: 2rem;
+    }
+    
+    /* --- Corrected Timeline Styles --- */
     .timeline::after {
         left: 50%;
         margin-left: -2px;
     }
-    
+
     .timeline-item {
         width: 50%;
-        padding-left: 0;
-        padding-right: 80px;
-        left: 0;
+        padding: 10px 0; /* Resets mobile padding */
+        position: relative;
     }
-    
-    /* Right-sided items */
+
+    /* -- RIGHT-SIDE ITEMS (1st, 3rd, etc.) -- */
     .timeline-item:nth-child(odd) {
         left: 50%;
-        padding-left: 80px;
-        padding-right: 0;
+        padding-left: 80px; /* Space between content and center line */
     }
     
-    .timeline-item::before {
-        left: 50%;
-        transform: translateX(-50%);
+    /* Position the circle for RIGHT-side items */
+    .timeline-item:nth-child(odd)::before {
+        left: -10px; /* Positions circle on the center line */
+        transform: none;
     }
+
+    /* -- LEFT-SIDE ITEMS (2nd, 4th, etc.) -- */
+    .timeline-item:nth-child(even) {
+        left: 0;
+        padding-right: 80px; /* Space between content and center line */
+        text-align: right; /* Aligns text to the right */
+    }
+    
+    /* Position the circle for LEFT-side items */
+    .timeline-item:nth-child(even)::before {
+        right: -10px; /* Positions circle on the center line */
+        left: auto;
+        transform: none;
+    }
+}
     /* --- ✨ NEW: Animations & Interactive Effects ✨ --- */
 
 /* 1. Scroll-Reveal Animation Setup */
