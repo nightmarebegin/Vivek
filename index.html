@@ -58,46 +58,65 @@
             </div>
         </section>
 
-        <section id="experience" class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Nov 2023 – Jul 2025</div>
-                    <div class="timeline-content">
+       <section id="experience" class="container">
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="experience-wrapper">
+
+        <article class="experience-card">
+            <div class="experience-header">
+                <div class="experience-heading">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Eli_Lilly_and_Company.svg/1280px-Eli_Lilly_and_Company.svg.png" alt="Eli Lilly and Company logo" class="company-logo">
+                    <div class="experience-title">
                         <h3>Associate Consultant</h3>
                         <p><strong>Eli Lilly and Company</strong> | Bengaluru KA, India</p>
-                        <ul>
-                            <li>Developed efficient data pipelines for the Zepbound (Lilly Health App) Reporting Layer to extract, transform, and load data from diverse sources into AWS Redshift, cutting manual effort by 40%.</li>
-                            <li>Processed data from AWS S3 using AWS Glue Spark RDD, applying business rules and loading into redshift db for 150+ tables containing 10+ million records related to patient for Lilly Health and Tempo application.</li>
-                            <li>Automated deployment of data pipelines via CI/CD using GitHub Actions.</li>
-                            <li>Engineered data pipelines to extract and process patient-related records from Salesforce CRM, integrating with AWS Redshift for centralized reporting and analytics.</li>
-                        </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Sep 2022 – Oct 2023</div>
-                    <div class="timeline-content">
+                <div class="experience-date">Nov 2023 – Aug 2025</div>
+            </div>
+            <ul class="experience-details">
+                <li>Engineered and automated high-throughput data pipelines for the Zepbound (Lilly Health App) reporting layer, integrating diverse data sources into AWS Redshift to slash manual processing effort by 40%.</li>
+                <li>Mastered large-scale data transformation by processing over 10 million patient records across 150+ tables using AWS Glue and Spark for the Lilly Health and Tempo applications.</li>
+                <li>Accelerated development cycles by implementing a robust CI/CD workflow with GitHub Actions, fully automating the deployment of data pipelines.</li>
+                <li>Designed a critical data bridge to extract patient records from Salesforce CRM, seamlessly integrating them into AWS Redshift to power centralized, data-driven analytics.</li>
+            </ul>
+        </article>
+
+        <article class="experience-card">
+            <div class="experience-header">
+                <div class="experience-heading">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Dish_Network_logo.svg/1024px-Dish_Network_logo.svg.png" alt="Dish Network logo" class="company-logo">
+                    <div class="experience-title">
                         <h3>Engineer I</h3>
                         <p><strong>Dish Network Technologies</strong> | Bengaluru KA, India</p>
-                        <ul>
-                            <li>Developed an automated data validation module and configured Airflow jobs to orchestrate ETL processes in AWS Glue, enhancing data processing efficiency.</li>
-                            <li>Designed and maintained data models in Oracle databases, optimizing querying and storage for analysis.</li>
-                        </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Aug 2021 – Sep 2022</div>
-                    <div class="timeline-content">
+                <div class="experience-date">Sep 2022 – Oct 2023</div>
+            </div>
+            <ul class="experience-details">
+                <li>Boosted data processing efficiency by developing a sophisticated automated data validation module and orchestrating complex ETL workflows in AWS Glue with Airflow.</li>
+                <li>Optimized data accessibility and performance by expertly designing and maintaining relational data models in Oracle, directly improving query speed for analytics.</li>
+            </ul>
+        </article>
+
+        <article class="experience-card">
+            <div class="experience-header">
+                 <div class="experience-heading">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Cognizant_logo_2022.svg/1280px-Cognizant_logo_2022.svg.png" alt="Cognizant logo" class="company-logo">
+                    <div class="experience-title">
                         <h3>Programmer Analyst</h3>
                         <p><strong>Cognizant Technology Solutions</strong> | Remote</p>
-                        <ul>
-                            <li>Developed and maintained ETL solution using SQL and Python to ingest data into the Snowflake.</li>
-                            <li>Created facts and dimensions tables in the Snowflake database.</li>
-                        </ul>
                     </div>
                 </div>
+                <div class="experience-date">Aug 2021 – Sep 2022</div>
             </div>
-        </section>
+            <ul class="experience-details">
+                <li>Built and sustained a scalable ETL framework using Python and SQL, enabling reliable data ingestion into a Snowflake data warehouse.</li>
+                <li>Established the foundational data architecture by creating critical fact and dimension tables within Snowflake, enabling structured business intelligence.</li>
+            </ul>
+        </article>
+
+    </div>
+</section>
 
         <section id="education" class="container">
             <h2 class="section-title">Education</h2>

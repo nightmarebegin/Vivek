@@ -547,5 +547,34 @@ header.scrolled {
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+
+}
+/* --- UPDATED Experience Section Styles --- */
+/* Replace your old .experience-header styles with this entire block */
+
+.experience-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between; /* Pushes date to the right */
+    gap: 1.5rem; /* Increased gap for better spacing */
+    margin-bottom: 1.5rem;
+}
+
+.experience-heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.company-logo {
+    width: 50px; /* Or adjust to your preference */
+    height: 50px;
+    object-fit: contain; /* Prevents logo from stretching */
+    flex-shrink: 0;
+}
+
+.experience-title {
+    flex-grow: 1;
 }
 }
