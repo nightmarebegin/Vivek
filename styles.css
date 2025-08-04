@@ -157,32 +157,64 @@ header nav {
 }
 
 /* --- Hero Section --- */
+/* --- NEW: Aesthetic Animated Hero Section --- */
+
 #hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('images/hero-bg.jpg') no-repeat center center/cover; /* Add a background image if you have one */
-    background-color: var(--secondary-color); /* Fallback color */
-    color: var(--light-text-color);
+    /* The animated gradient background */
+    background: linear-gradient(45deg, #1d2b64, #3498db, #2c3e50, #f8cdda);
+    background-size: 400% 400%;
+    animation: animated-gradient 15s ease infinite;
+
+    /* Layout and styling */
+    color: #ffffff; /* Use pure white for better contrast */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     min-height: 100vh;
     padding-top: 70px; /* Offset for fixed header */
+    overflow: hidden; /* Ensures gradient doesn't spill */
+}
+
+/* Keyframes define the animation for the gradient's position */
+@keyframes animated-gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-content {
+    /* Add a subtle glass-like effect to the content container */
+    padding: 3rem 2rem;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .hero-title {
-    font-size: 2.5rem;
-    color: var(--light-text-color);
+    font-size: 3rem; /* Slightly larger for more impact */
+    color: #ffffff; /* Ensure title is white */
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Adds depth */
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 300;
-    margin: 1rem 0 2rem;
+    margin: 1.5rem 0 2.5rem;
+    max-width: 600px;
 }
 
-.hero-cta .btn {
-    margin: 0.5rem;
+/* We need a new cursor effect that is visible on the new background */
+#typewriter::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+    color: #ffffff; /* White cursor */
 }
+
+/* Updated button styles for the new
 
 /* --- About Section --- */
 .about-content {
@@ -576,5 +608,55 @@ header.scrolled {
 
 .experience-title {
     flex-grow: 1;
+}
+/* --- NEW: Certifications Section Styles --- */
+
+#certifications {
+    background-color: var(--card-bg-color); /* A slightly different background to stand out */
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.certification-card {
+    background: #fff; /* Use a consistent card background */
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.certification-logo {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+}
+
+.certification-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+}
+
+.certification-info p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.certification-info .btn {
+    display: inline-block; /* Ensures button is centered properly */
 }
 }
